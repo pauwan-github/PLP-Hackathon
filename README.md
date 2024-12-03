@@ -44,9 +44,9 @@ The Mental and General Health System documented here provides all the people wit
  
  ## 3. Technologies and Packages
  IDE’s to install visit the links in brackets to install the software’s below. Note that node.js comes having npm(node package manager).
- [Visual Studio Code](https://code.visualstudio.com/)
-[Node.js](https://nodejs.org/en)
-[NPM]()
+-[Visual Studio Code](https://code.visualstudio.com/)
+-[Node.js](https://nodejs.org/en)
+-[NPM]()
 After installing the above soft wares: Open your Visual studio code and press ctrl + back-tick (`) to open a terminal. Write the following codes.
 ~~~bash
 node –v # (to check if the node.js is installed and to check out its version)
@@ -187,7 +187,8 @@ The codes used are in this file repository.
 └───public
     ├───illness
     │   └───pics
-    └───pics~~~
+    └───pics
+~~~
 # Follow the following procedures to set up vs code for running program backend
 ## server.js
 *Open up your visual studio code and press ctrl + ` to open a new terminal.

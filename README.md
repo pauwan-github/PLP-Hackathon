@@ -191,11 +191,14 @@ The codes used are in this file repository.
 ~~~
 # Follow the following procedures to set up vs code for running program backend
 ## server.js
-*Open up your visual studio code and press ctrl + ` to open a new terminal.
-*On the terminal write
-~~~  npm install express~~~
+-Open up your visual studio code and press ctrl + ` to open a new terminal.
+-On the terminal write
+~~~bash
+npm install express
+~~~
 After the packages are installed, a file (package.json) will be added on your folder that looks like that will have a part like the one shown below.
-~~~"dependencies": {
+~~~json
+"dependencies": {
     "express": "^4.21.1"
   }~~~
 Go to your folder and add a file called server.js and write the following codes.

@@ -1,46 +1,73 @@
 # Mental and General Health Care
 ## This is the documentation of Mental and General Health Care System and how to incorporate it into your desktop and run it.
 Here's a step-by-step guide on how to get this project from GitHub and run it on your desktop:
-Prerequisites:
-- Git: A version control system to clone the repository. You can download it from the official Git website.   - Required Tools: Ensure you have the necessary tools (npm, Node.js, vs code.) to run the project, depending on its programming language.
+###**Prerequisites:**
+- **Git:** A version control system to clone the repository. You can download it from the official Git website.
+- **Required Tools:** Ensure you have the necessary tools (npm, Node.js, vs code.) to run the project, depending on its programming language.
 - ## Steps:
 **Find the Repository:**
 -Go to GitHub and search for the project you want.
--Once you find it, navigate to the repository's main page. Clone the Repository:
+-Once you find it, navigate to the repository's main page.
+**Clone the Repository:**
 -Using the Command Line:
 -Open your terminal or command prompt.
--Navigate to the directory where you want to clone the repository. Use the git clone command followed by the repository's URL:
-[git clone](https://github.com/pauwan-github/PLP-Hackathon.git)
-**Using a Git Client:** Use a Git client like GitHub Desktop or SourceTree.   In the client, use the "Clone Repository" option and paste the repository's URL. **Navigate to the Repositories:**
-  *Open your terminal or command prompt.
-  *Use the cd command to navigate to the cloned repository's directory:
-~~~ cd PLP-Hackathon
+-Navigate to the directory where you want to clone the repository.
+Use the git clone command followed by the repository's URL:
+```bash
+git clone https://github.com/pauwan-github/PLP-Hackathon.git
+```
+**Using a Git Client:** Use a Git client like GitHub Desktop or SourceTree.   In the client, use the "Clone Repository" option and paste the repository's URL. 
+**Navigate to the Repositories:**
+  -Open your terminal or command prompt.
+  -Use the cd command to navigate to the cloned repository's directory:
+  
+```bash
+cd PLP-Hackathon
+```
 **Install Dependencies (if necessary):**
 
 If the project has dependencies (express), you'll need to install them. By running the following code on your terminal
-**Run the Project:** Direct Execution: You might be able to directly execute the main file (e.g., node index.js for Node.js).
+```bash
+npm install express
+```
+
+**Run the Project:** 
+Direct Execution: You might be able to directly execute the main file (e.g., node index.js for Node.js).
+
 ## 1. Project Overview
 ### Introduction
+
 The Mental and General Health System documented here provides all the people with services to health practices and professionals in the line of medicine. This Mental and General Health System provides a streamlined way for hospitals and general people to access health diagnosis and access helath related information information. It features pages such as: a) Home, Diseases(HIV & AIDS, MPOX, Cholera, Typhoid, Bilharzia, Flu among others) Mental Check Up, Disease Detection, Mental Awareness. The project is implemented using HTML, CSS, JavaScript and ( for both client-side and server-side).
+
  ## 2. System Architecture
  The system follows a three-tier architecture: a) Presentation Layer (user interface) - Built with HTML, CSS and JavaScript. b) Application Layer - Node.js handles the server-side logic, manages user requests, processes data, and communicates. c). It’s simply Frontend (HTML, CSS, JS)  Backend (Node.js, Express.js).
+ 
  ## 3. Technologies and Packages
  IDE’s to install visit the links in brackets to install the software’s below. Note that node.js comes having npm(node package manager).
  [Visual Studio Code](https://code.visualstudio.com/)
 [Node.js](https://nodejs.org/en)
 [NPM]()
 After installing the above soft wares: Open your Visual studio code and press ctrl + back-tick (`) to open a terminal. Write the following codes.
-~~~-	node –v # (to check if the node.js is installed and to check out its version)~~~
-~~~-	npm –v # (to check if the npm is installed and to check out its version)~~~
+~~~bash
+node –v # (to check if the node.js is installed and to check out its version)
+~~~
+
+~~~bash
+npm –v # (to check if the npm is installed and to check out its version)
+~~~
+
 Languages and Frameworks
-*Frontend - HTML, CSS, JavaScript
-*Backend - Node.js, Express.js
-*Express for server creation and handling routes
-~~npm install express
+-Frontend - HTML, CSS, JavaScript
+-Backend - Node.js, Express.js
+-Express for server creation and handling routes
+~~~ bash
+npm install express
+~~~
 ## 4. Frontend Structure and Code
 The codes used are in this file repository.
 ## 5. Structure
-~~~├───node_modules
+~~~bash
+├───node_modules
 │   ├───.bin
 │   ├───accepts
 │   ├───array-flatten

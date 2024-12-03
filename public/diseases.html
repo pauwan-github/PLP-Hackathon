@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases Awareness</title>
+    
+    
+    </div>
+    </div>
+    <div id="bar">
+        <ul>
+            <a href="index.html"><img src="pics/mentalhealthlogo.png" id="logo">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="Diseasedetection.html">Disease Detection</a></li>
+
+            <li><a href="#" id="active">Diseases</a></li>
+
+            <li><a href="mentalhealth.html">Mental Check Up</a></li>
+
+            <li><a href="mentalawareness.html">Mental</a></li>
+        </ul>
+        <button onclick="openModal()" class="modal">Search</button>
+            <div id="output-container"></div>
+    </div>
+    <style>
+        /* Apply styles for larger screens */
+@media only screen and (min-width: 600px) {
+    /* Adjust layout for screens wider than 600px */
+    .container {
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+    }
+}
+
+/* Apply styles for even larger screens */
+@media only screen and (min-width: 900px) {
+    /* Adjust layout for screens wider than 900px */
+    .container {
+        width: 60%; /* Adjust as needed */
+    }
+}
+    body{
+        background-color: #f2f2f2;
+    }
+     #bar{
+    margin-top: 0px;
+    background-color: #0dbfaa;
+    text-align: center;
+    padding-left: 15px;
+    padding: 1px;
+}
+    #bar ul li{
+    display: inline; 
+}
+#bar ul li a{
+    
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 500ms;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+#active{
+    background-color: red;
+    color: yellow;
+    border-radius: 5px;
+}
+#bar ul li a:hover{
+    background-color: blue;
+    color: white;
+    transition: 500ms;
+    border-radius: 10px;
+}
+header{
+    background-image: url('illness/pics/heart3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 20px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+.dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .cta{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: skyblue;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: navy;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta:hover{
+            background-color: blue;
+            opacity: 1;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            opacity: 0.8;
+        }
+        .dropdown-content a{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover{
+            background-color: #f2f2f2;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .outee{
+            display: flex;
+        }
+        .out{
+            padding-top: 20px;
+            margin-left: 120px;
+            padding-right: 150px;
+            padding-bottom: 20px;
+        }
+        .left-image{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out1{
+            padding-top: 20px;
+            margin-left: 0px;
+            padding-right: 200px;
+            padding-bottom: 20px;
+        }
+        .left-image1{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out2{
+            padding-top: 20px;
+            margin-left: 0px;
+            padding-right: 120px;
+            padding-bottom: 20px;
+        }
+        .left-image2{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .outee1{
+            display: flex;
+        }
+        .out0{
+            padding-top: 20px;
+            margin-left: 120px;
+            padding-right: 150px;
+            padding-bottom: 20px;
+        }
+        .left-image0{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out11{
+            padding-top: 20px;
+            margin-left: 130px;
+            padding-right: 0px;
+            padding-bottom: 20px;
+        }
+        .left-image11{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out22{
+            padding-top: 20px;
+            margin-left: 185px;
+            padding-right: 200px;
+            padding-bottom: 20px;
+        }
+        .left-image22{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .outee2{
+            display: flex;
+        }
+        .out00{
+            padding-top: 20px;
+            margin-left: 120px;
+            padding-right: 80px;
+            padding-bottom: 20px;
+        }
+        .left-image00{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out111{
+            padding-top: 20px;
+            margin-left: 160px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+        .left-image111{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out222{
+            padding-top: 20px;
+            margin-left: 150px;
+            padding-right: 60px;
+            padding-bottom: 20px;
+        }
+        .footer1{
+            background-color: yellow;
+            color: red;
+            padding: 0px;
+        }
+        .unordered-list-container{
+            display: flex;
+        }
+            .horizontal-list{
+                list-style:none;
+                display: flex;
+            }
+            .horizontal-list li{
+                margin-left: 100px;
+            }
+        .left-image222{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .outee3{
+            display: flex;
+        }
+        .out000{
+            padding-top: 20px;
+            margin-left: 120px;
+            padding-right: 80px;
+            padding-bottom: 20px;
+        }
+        .left-image000{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out1111{
+            padding-top: 20px;
+            margin-left: 100px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+        .left-image1111{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .out2222{
+            padding-top: 20px;
+            margin-left: 200px;
+            padding-right: 80px;
+            padding-bottom: 20px;
+        }
+        .left-image2222{
+            max-width: 100px;
+            margin-left:0px;
+        }
+        .foot{
+    background-color: #333;
+    color:#fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.con{
+            display:flex;
+            margin-left: 0px;
+            background-color: lightgray;
+            padding-left: 20px;
+            margin-bottom: 0px;
+            list-style: none;
+            margin-top: 10px;
+            justify-content: space-evenly;
+            margin-bottom: 60px;
+            
+            
+        }
+        footer{
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-bottom: 10px;
+        }
+        ul{
+            list-style: none;
+        }
+        #logo{
+    margin-top: -30px;
+    width: 55px;
+    position: absolute;
+    padding-top: 15px;
+    margin-left: 0px;
+}
+/* CSS for custom modal */
+.modal {
+ /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 200px;
+    top: 50px;
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: red; /* Black with opacity */
+    
+}
+#output-container{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0px;
+    top: 50px;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: skyblue; /* Black with opacity */
+}
+    </style>
+</head>
+
+
+<body>
+    <header><h1>Diseases Awareness</h1>
+        <h3><marquee behavior="scroll" direction="relative" scrollamount="5";>Get to Know More About Diseases</marquee></h3>
+    </header>
+    
+    <div class="outee">
+    <div class="out">
+        <img src="illness/pics/malaria.png" width="50px" height="50px" class="left-image"><h4><strong><a href="malaria.html">Malaria Signs & Symptoms</a></strong></h4>
+        <font color="grey">Fever, chills, and sweating, fatigue, nausea and vomiting.</font>
+        <a href="malaria.html">Read more</a>
+    </div>
+    <div class="out1">
+        <img src="illness/pics/doctor.png" width="50px" height="50px" class="left-image1"><h4><strong><a href="denguefever.html">Dengue Fever Signs & Symptoms</a></strong></h4>
+        <font color="grey">High fever, severe headache, and joint/muscle pain, rash and mild bleeding.</font>
+        <a href="denguefever.html">Read more</a>
+        </div>
+    <div class="out2">
+        <img src="illness/pics/clinic.png" width="50px" height="50px"class="left-image2"><h4><strong><a href="ebola.html">Ebola Signs & Symptoms</a></strong></h4>
+        <font color="grey">Sudden onset of fever, fatigue, and muscle pain, vomiting, diarrhea, and rash.</font>
+        <a href="ebola.html">Read more</a>
+    </div>
+</div>
+<div class="outee1">
+<div class="out0">
+    <img src="illness/pics/lifestyle.png" width="50px" height="50px"class="left-image"><h4><strong><a href="bilharzia.html">Bilharzia Signs & Symptoms</a></strong></h4>
+    <font color="grey">Rash or itchy skin after exposure to water, adominal pain and blood in urine or stool, chronic cases may lead to organ damage.</font>
+    <a href="bilharzia.html">Read more</a>
+</div>
+<div class="out11">
+    <img src="illness/pics/aids.png" width="50px" height="50px"class="left-image1"><h4><strong><a href="hivaids.html">HIV & AIDS Signs & Symptoms</a></strong></h4>
+    <font color="grey">Flu-like symptoms (fever, sore throat) during early stages, weight loss, persistent fever, and opportunistic infections in advanced stages.</font>
+    <a href="hivaids.html">Read more</a>
+</div>
+<div class="out22">
+    <img src="illness/pics/health.png" width="50px" height="50px" class="left-image2"><h4><strong><a href="mpox.html">MPOX Signs & Symptoms</a></strong></h4>
+    <font color="grey">Fever, headache, muscle aches and back pain, chills, fatigue, Swollen lymph nodes (a key distinguishing symptom from smallpox) and rashes.</font>
+    <a href="mpox.html">Read more</a>
+       </div>
+</div>
+        <div class="outee2">
+        <div class="out00">
+        <img src="illness/pics/cholera.png" width="50px" height="50px" class="left-image"><h4><strong></strong><a href="cholera.html">Cholera Signs & Symptoms</a></strong></h4>
+        <font color="grey">Severe watery diarrhea, dehydration and muscle cramps, vomiting.</font>
+        <a href="cholera.html">Read more</a>
+        </div>
+        <div class="out111">
+        <img src="illness/pics/tb.png" width="50px" height="50px" class="left-image1"><h4><strong><a href="tb.html">Tuberculosis Signs & Symptoms</a></strong></h4>
+        <font color="grey">Fever, persistent cough, weight loss, chest pains, night sweats.</font>
+        <a href="tb.html">Read more</a>
+
+        </div>
+        <div class="out222">
+        <img src="illness/pics/pharmacy.png" width="50px" height="50px" class="left-image2"><h4><strong><a href="typhoid.html">Typhoid Signs & Symptoms</a></strong></h4>
+        <font color="grey">High fever and abdominal pain, constipation or diarrhea, fatigue and weakness</font>
+        <a href="typhoid.html">Read more</a>
+        </div>
+        </div>
+      <div class="outee3">
+        <div class="out000">
+            <img src="illness/pics/flu.png" width="50px" height="50px" class="left-image"><h4><strong><a href="flu.html">Flu Signs & Symptoms</a></strong></h4>
+            <font color="grey">Fever or chills, cough, sore throat, runny or stuffy nose, muscle or body aches, headaches, fatigue (tiredness), sometimes vomiting and diarrhea (more common in children)</font>
+            <a href="flu.html">Read more</a>
+        </div>
+        <div class="out1111">
+            <img src="illness/pics/cure.png" width="50px" height="50px" class="left-image1"><h4><strong><a href="migraine.html">Migraine Signs & Symptoms</a></strong></h4>
+            <font color="grey">Primary symptom: Moderate to severe headache, usually on one side of the head, throbbing or pulsing in nature, nausea or vomiting, sensitivity to light, sound, or smells.</font>
+            <a href="migraine.html">Read more</a>
+        </div>
+        <div class="out2222">
+            <img src="illness/pics/accidents.png" width="50px" height="50px" class="left-image2"><h4><strong><a href="typhoid.html">Prevention and Cure of Typhoid</a></strong></h4>
+            <font color="grey">Drinking boiled water, covering unattended food, wasshing fruits and vegetables with running water</font>
+            <a href="typhoid.html">Read more</a>
+         </div>
+    
+    </div>
+    <br><br>
+    <hr>
+<div class="con">
+    <footer>
+        <a href="index.html"><img src="pics/mentalhealthlogo.png" width="150px" height="150px"></a>
+    </footer>
+    <footer>
+        <strong><h3>Quick Links</h3></strong>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="Diseasedetection.html">Disease Detection</a></li>
+
+            <li><a href="mentalhealth.html">Mental Checkup</a></li>
+
+            <li><a href="mentalawareness.html">Mental Awareness</a></li>
+
+            <li><a href="#">Diseases</a></li>
+        </ul>
+    </footer>
+    <footer><strong><h3>Contact Us</h3></strong>
+    The People's Hospital<br>Jewel Complex, Roysambu<br>PO BOX 1212-00100, Nairobi,<br>Kenya<br>TEL: +254 735 143 953<br>+254 716 684 446<br>temdinguri1@gmail.com
+    </footer>
+<footer><strong><h3>Socials</h3></strong>
+<ul>
+    <li><a href="https://www.instagram.com/_pau.wan"><img src="illness/pics/IG.png.png" width="20px" length="20px"> Instagram</a></li>
+    <li><a href="https://www.facebook.com/paul.wanjuki.3"><img src="illness/pics/fb.png.png" width="20px" length="20px"> Facebook</a></li>
+    <li><a href="https://twitter.com/Temdinguri"><img src="illness/pics/twitt.png.png" width="20px" length="20px"> Twitter</a></li>
+    <li><a href="https://wa.me/254716684446"><img src="illness/pics/app.png.png" width="20px" length="20px"> Whatsapp</a></li>
+</ul></footer>
+</div>
+    <div class="foot">
+        <p>&copy 2024 The People's Hospital. All rights reserved</p>
+    </div>
+    <script src="search.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>

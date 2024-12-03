@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Care Survey</title>
+    <link rel="stylesheet" href="mental.css">
+    <link rel="stylesheet" href="healthcare.css">
+
+    <script>
+        function validateAge() {
+            const ageInput = document.getElementById("age");
+            const age = parseInt(ageInput.value, 10);
+            if (age < 0 || age > 140) {
+                alert("Age must be between 0 and 140.");
+                ageInput.value = ""; // Clear the input
+            }
+        }
+
+        // Function to validate the occupation field
+        function validateOccupation() {
+            const occupationInput = document.getElementById("occupation");
+            const regex = /^[a-zA-Z\s]*$/; // Allow only letters and spaces
+            if (!regex.test(occupationInput.value)) {
+                alert("Occupation must only contain letters and spaces.");
+                occupationInput.value = occupationInput.value.replace(/[^a-zA-Z\s]/g, ""); // Remove invalid characters
+            }
+        }
+
+        // Function to validate the name field
+        function validateName() {
+            const nameInput = document.getElementById("name");
+            const regex = /^[a-zA-Z\s]*$/; // Allow only letters and spaces
+            if (!regex.test(nameInput.value)) {
+                alert("Name must only contain letters and spaces.");
+                nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, ""); // Remove invalid characters
+            }
+        }
+
+    </script>
+
+</head>
+
+<div class="nav-control"><input type="checkbox" id="check"><label for="check"><img src="illness/pics/66.png" id="nav-control" title="Control Navigation bar by clicking here"></label></body></div></a>
+    <a href="index.html"><img src="pics/mentalhealthlogo.png" id="logo"></a><br>
+    <div class="head"><h2>MENTAL CHECK UP</h2></div>
+
+<body>
+    <div class="nav-bar">
+        <ul>
+       <div id="bar">
+           <ul Alink="gold" Vlink="white" link="blue">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="Diseasedetection.html">Disease Detection</a></li>
+             <li><a href="diseases.html">Diseases</a></li>          
+             <li><a href="#" id="active">Mental Check Up</a></li>
+             <li><a href="mentalawareness.html">Mental Awareness</a></li>
+        </ul>
+        <button onclick="openModal()" class="modal">Search</button>
+            <div id="output-container"></div>
+        
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Mental Health Care Survey</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name"><b>Name:</b></label>
+                <input type="text" id="name" name="name" required oninput="validateName()">
+            </div>        
+            <div class="form-group">
+                <label for="age"><b>Age:</b></label>
+                <input type="number" id="age" name="age" required min="1" max="140" onblur="validateAge()">
+            </div>        
+            <div class="form-group">
+                <label><b>Gender:</b></label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        
+            <div class="form-group">
+                <label for="occupation"><b>Occupation:</b></label>
+                <input type="text" id="occupation" name="occupation" required oninput="validateOccupation()">
+            </div>
+        
+            <div class="form-group behaviors">
+                <label><b>Behaviors (Select all that apply):</b></label>
+                <label><input type="checkbox" name="behaviors" value="Stress"> Stress</label>
+                <label><input type="checkbox" name="behaviors" value="Isolation"> Isolation</label>
+                <label><input type="checkbox" name="behaviors" value="Suicidal Thoughts"> Suicidal Thoughts</label>
+                <label><input type="checkbox" name="behaviors" value="Lack of Sleep"> Lack of Sleep</label>
+                <label><input type="checkbox" name="behaviors" value="Restlessness"> Restlessness</label>
+                <label><input type="checkbox" name="behaviors" value="Fear"> Fear</label>
+                <label><input type="checkbox" name="behaviors" value="Trembling"> Trembling</label>
+                <label><input type="checkbox" name="behaviors" value="Low Focus"> Low Focus</label>
+                <label><input type="checkbox" name="behaviors" value="Overreacting"> Overreacting</label>
+                <label><input type="checkbox" name="behaviors" value="Mood Swings"> Mood Swings</label>
+                <label><input type="checkbox" name="behaviors" value="Physical Symptoms"> Physical Symptoms</label>
+                <label><input type="checkbox" name="behaviors" value="Self-blame"> Self-blame</label>
+                <label><input type="checkbox" name="behaviors" value="Flashbacks"> Traumatic Events Flash Backs</label>
+                <label><input type="checkbox" name="behaviors" value="Nightmares"> Nightmares</label>
+                <label><input type="checkbox" name="behaviors" value="Hypervigilance"> Easily startled or alert always</label>
+                <label><input type="checkbox" name="behaviors" value="Emotional numbness"> Detachment from close people</label>
+                <label><input type="checkbox" name="behaviors" value="Aggressiveness"> Aggressiveness</label>
+                <label><input type="checkbox" name="behaviors" value="Hyperactive"> Hyperactive</label>
+                <label><input type="checkbox" name="behaviors" value="Guilt"> Guilt or Shame</label>
+                <label><input type="checkbox" name="behaviors" value="Excessive Talking"> Excessive Talking</label>
+                <label><input type="checkbox" name="behaviors" value="Impulsive Behavior"> Impulsive Behaviors</label>
+                <label><input type="checkbox" name="behaviors" value="Racing Thoughts"> Racing Thoughts</label>
+                <label><input type="checkbox" name="behaviors" value="Decreaased Sleep Time"> Decreased Sleep Time</label>
+                <label><input type="checkbox" name="behaviors" value="Inflated Self-esteem"> Inflated Self-esteem</label>
+                <label><input type="checkbox" name="behaviors" value="Poor Concentration"> Poor Concentration</label>
+                <label><input type="checkbox" name="behaviors" value="Persistent Sadness">Persistent Sadness</label>                
+                <label><input type="checkbox" name="behaviors" value="Mood Swings"> Mood Swings</label>
+            </div>
+        
+            <button type="button" id="submitSurvey">Submit Survey</button>
+        </form>
+        
+
+        <div id="output" class="output"></div>
+    </div>
+    <hr>
+    <div class="con">
+        <footer>
+            <a href="index.html"><img src="pics/mentalhealthlogo.png" width="150px" height="150px"></a>
+        </footer>
+        <footer>
+            <strong><h3>Quick Links</h3></strong>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+      
+                <li><a href="Diseasedetection.html">Disease Detection</a></li>
+
+                 <li><a href="diseases.html">Diseases</a></li>
+
+                 <li><a href="mentalhealth.html">Mental Check Up</a></li>
+
+                 <li><a href="mentalawareness.html">Mental</a></li>
+            </ul>
+        </footer>
+        <footer><strong><h3>Contact Us</h3></strong>
+        Mental Health Care<br>Africa<br>Kenya<br>TEL: +254 735 143 953<br>+254 716 684 446<br>temdinguri1@gmail.com
+        </footer>
+    <footer><strong><h3>Socials</h3></strong>
+    <ul>
+        
+        <li><a href="https://www.instagram.com/_pau.wan"><img src="illness\pics\IG.png.png" width="20px" length="20px"> Instagram</a></li>
+        <li><a href="https://www.facebook.com/paul.wanjuki.3"><img src="illness\pics\fb.png.png" width="20px" length="20px"> Facebook</a></li>
+        <li><a href="https://twitter.com/Temdinguri"><img src="illness\pics\twitt.png.png" width="20px" length="20px"> Twitter</a></li>
+        <li><a href="https://wa.me/254716684446"><img src="illness\pics\app.png.png" width="20px" length="20px"> Whatsapp</a></li>
+    </ul></footer>
+    </div>
+        <div class="foot">
+            <p>&copy 2024 Mental Health Care. All rights reserved</p>
+        </div>
+
+    <script src="mental.js"></script>
+    <script src="search.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>

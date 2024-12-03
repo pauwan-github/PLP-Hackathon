@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Diagnosis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="healthcare.css">
+
+    <Script>
+        // Function to validate the name field
+        function validateName() {
+            const nameInput = document.getElementById("name");
+            const regex = /^[a-zA-Z\s]*$/; // Allow only letters and spaces
+            if (!regex.test(nameInput.value)) {
+                alert("Name must only contain letters and spaces.");
+                nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, ""); // Remove invalid characters
+            }
+        }
+    </Script>
+</head>
+
+<div class="nav-control"></div><input type="checkbox" id="check"><label for="check"><img src="illness/pics/66.png" id="nav-control" title="Control Navigation bar by clicking here"></label></body></div></a>
+    <a href="index.html"><img src="pics/mentalhealthlogo.png" id="logo"></a><br>
+    <div class="head"><h2>MENTAL AND GENERAL HEALTH CARE</h2></div>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+       <div id="bar">
+           <ul Alink="gold" Vlink="white" link="blue">
+             <li><a href="index.html">Home</a></li> 
+             <li><a href="#" id="active">Disease Detection</a></li>
+             <li><a href="diseases.html">Diseases</a></li>           
+             <li><a href="mentalhealth.html">Mental Check Up</a></li>
+             <li><a href="mentalawareness.html">Mental Awareness</a></li>
+            </ul>
+
+            <button onclick="openModal()" class="modal">Search</button>
+            <div id="output-container"></div>
+        
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Disease Diagnosis</h1>
+        <form id="diagnosisForm">
+
+            <div class="form-group">
+                <p><b>Please Enter your Name</b></p>
+                <label for="name"><b>Name:*</b></label>
+                <input type="text" id="name" name="name" required oninput="validateName()">
+            </div>
+
+    
+            <p><b>Please Select Your Gender</b></p>
+            <div class="form-group">
+                <label><b>Gender:*</b></label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+               
+
+            <p><b>Click on the symptons that you are having the more symptoms the easier to diagnose</b></p>
+            <hr>
+            <div class="form-group behaviors">
+                <label><b>Symptoms:</b></label>
+                <label><input type="checkbox" name="symptoms" value="Fever"> Fever</label>
+                
+                <label><input type="checkbox" name="symptoms" value="Chills"> Chills</label>
+                <label><input type="checkbox" name="symptoms" value="Loss of Apetite"> Loss of Apetite</label>
+                <label><input type="checkbox" name="symptoms" value="Fatigue"> Fatigue</label>
+                <label><input type="checkbox" name="symptoms" value="Rashes"> Rashes</label>
+                <label><input type="checkbox" name="symptoms" value="Weight Loss"> Weight Loss</label>
+                <label><input type="checkbox" name="symptoms" value="Muscle Cramps"> Muscle Cramps</label>
+                <label><input type="checkbox" name="symptoms" value="Weak"> Feeling Weak</label>
+                <label><input type="checkbox" name="symptoms" value="Sweating"> Sweating</label>
+                <label><input type="checkbox" name="symptoms" value="Vomiting"> Vomiting</label>
+                <label><input type="checkbox" name="symptoms" value="Nausea"> Nausea</label>
+                <label><input type="checkbox" name="symptoms" value="Cough"> Cough</label>
+                <label><input type="checkbox" name="symptoms" value="Itchy Skin"> Itchy Skin</label>
+                <label><input type="checkbox" name="symptoms" value="Chronic Cases"> Chronic Cases</label>
+                <label><input type="checkbox" name="symptoms" value="Opportunistic Diseases"> Opportunistic Diseases</label>
+               
+                <label><input type="checkbox" name="symptoms" value="Sore Throat"> Sore Throat</label>
+                <label><input type="checkbox" name="symptoms" value="Abdominal Pain"> Abdominal Pain</label>
+                <label><input type="checkbox" name="symptoms" value="Chest Pain"> Chest Pain</label>
+                <label><input type="checkbox" name="symptoms" value="Joint Pain"> Joint Pain</label>
+                <label><input type="checkbox" name="symptoms" value="Muscle Pain"> Muscle Pain</label>
+                <label><input type="checkbox" name="symptoms" value="Body Aches"> Body Aches</label>
+                <label><input type="checkbox" name="symptoms" value="Back ache"> Back ache</label>
+                <label><input type="checkbox" name="symptoms" value="Stomach ache"> Stomach ache</label>
+                <label><input type="checkbox" name="symptoms" value="Headache"> Headache</label>
+                
+                                
+                <label><input type="checkbox" name="symptoms" value="Constipation"> Constipation</label>
+                <label><input type="checkbox" name="symptoms" value="Dehydration"> Dehydration</label>
+                <label><input type="checkbox" name="symptoms" value="Diarrhoea"> Diarrhoea</label>
+                <label><input type="checkbox" name="symptoms" value="Blood in Stool"> Blood in urine or Stool</label>
+                <label><input type="checkbox" name="symptoms" value="External Bleeding"> External Bleeding</label>
+                <label><input type="checkbox" name="symptoms" value="Internal Bleeding"> Internal Bleeding</label>
+                <label><input type="checkbox" name="symptoms" value="Mild Bleeding"> Mild Bleeding</label>
+                               
+                
+                <label><input type="checkbox" name="symptoms" value="Difficulty in Breathing"> Difficulty in Breathing</label>
+            </div>
+
+
+
+
+
+            <button type="button" id="diagnoseButton">Diagnose</button>
+        </form>
+
+        <div id="output" class="output"></div>
+    </div>
+
+    <hr>
+<div class="con">
+    <footer>
+        <a href="index.html"><img src="pics/mentalhealthlogo.png" width="150px" height="150px"></a>
+    </footer>
+    <footer>
+        <strong><h3>Quick Links</h3></strong>
+        <ul>
+            <li><a href="healthcare.html">Home</a></li>
+  
+            <li><a href="#">Disease Detection</a></li>
+            
+             <li><a href="mentalhealth.html">Mental Check Up</a></li>
+
+             <li><a href="diseases.html">Diseases</a></li>
+
+             <li><a href="mentalawareness.html">Mental Awareness</a></li>
+        </ul>
+    </footer>
+    <footer><strong><h3>Contact Us</h3></strong>
+    Mental Health Care<br>Africa<br>Kenya<br>TEL: +254 735 143 953<br>+254 716 684 446<br>temdinguri1@gmail.com
+    </footer>
+<footer><strong><h3>Socials</h3></strong>
+<ul>
+    
+    <li><a href="https://www.instagram.com/_pau.wan"><img src="illness\pics\IG.png.png" width="20px" length="20px"> Instagram</a></li>
+    <li><a href="https://www.facebook.com/paul.wanjuki.3"><img src="illness\pics\fb.png.png" width="20px" length="20px"> Facebook</a></li>
+    <li><a href="https://twitter.com/Temdinguri"><img src="illness\pics\twitt.png.png" width="20px" length="20px"> Twitter</a></li>
+    <li><a href="https://wa.me/254716684446"><img src="illness\pics\app.png.png" width="20px" length="20px"> Whatsapp</a></li>
+</ul></footer>
+</div>
+    <div class="foot">
+        <p>&copy 2024 Mental Health Care. All rights reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>

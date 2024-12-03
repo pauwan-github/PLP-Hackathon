@@ -14,7 +14,7 @@ Prerequisites:
 **Using a Git Client:** Use a Git client like GitHub Desktop or SourceTree.   In the client, use the "Clone Repository" option and paste the repository's URL. **Navigate to the Repositories:**
   *Open your terminal or command prompt.
   *Use the cd command to navigate to the cloned repository's directory:
-~~~cd PLP-Hackathon~~~
+~~~ cd PLP-Hackathon~~~
 **Install Dependencies (if necessary):**
 
 If the project has dependencies (express), you'll need to install them. By running the following code on your terminal

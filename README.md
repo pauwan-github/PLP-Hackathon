@@ -197,12 +197,14 @@ The codes used are in this file repository.
 npm install express
 ~~~
 After the packages are installed, a file (package.json) will be added on your folder that looks like that will have a part like the one shown below.
-~~~json
+~~~javascript
 "dependencies": {
     "express": "^4.21.1"
-  }~~~
+  }
+~~~
 Go to your folder and add a file called server.js and write the following codes.
-~~~const express = require('express');
+~~~javascript
+const express = require('express');
 const app = express();
 const port = 3005;
 
@@ -230,7 +232,9 @@ a. Clone the repository git clone cd Disease Detector
 b. Make sure that you’ve the necessary packages npm install mysql express.
 
 c. Start the server On the terminal write
-~~~node server.js~~~
+~~~bash
+node server.js
+~~~
 d. Using your browser, access the application by typing the following on your url section. http://localhost:3100
 This documentation has provided a complete guide to understanding and setting up the Mental and Health General Health system on a local machine. Let me know if you need more details on specific sections.
  

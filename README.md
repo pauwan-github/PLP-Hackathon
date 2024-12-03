@@ -5,11 +5,11 @@ Prerequisites:
 - Git: A version control system to clone the repository. You can download it from the official Git website.   - Required Tools: Ensure you have the necessary tools (npm, Node.js, vs code.) to run the project, depending on its programming language.
 - ## Steps:
 **Find the Repository:**
-*Go to GitHub and search for the project you want.
-*Once you find it, navigate to the repository's main page. Clone the Repository:
-*Using the Command Line:
-*Open your terminal or command prompt.
-*Navigate to the directory where you want to clone the repository. Use the git clone command followed by the repository's URL:
+-Go to GitHub and search for the project you want.
+-Once you find it, navigate to the repository's main page. Clone the Repository:
+-Using the Command Line:
+-Open your terminal or command prompt.
+-Navigate to the directory where you want to clone the repository. Use the git clone command followed by the repository's URL:
 [git clone](https://github.com/pauwan-github/PLP-Hackathon.git)
 **Using a Git Client:** Use a Git client like GitHub Desktop or SourceTree.   In the client, use the "Clone Repository" option and paste the repository's URL. **Navigate to the Repositories:**
   *Open your terminal or command prompt.
